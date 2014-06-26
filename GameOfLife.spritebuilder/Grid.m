@@ -185,7 +185,8 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *currentCreature = _gridArray[i][j];
             
             // remember that every creature has a 'livingNeighbors' property that we created earlier
-            //currentCreature.livingNeighbors = 0; we have to skip this in the update
+            currentCreature.livingNeighbors = 0;
+            //we have to skip this in the update
             //method because we are updating and not counting
             
             // now examine every cell around the current one
