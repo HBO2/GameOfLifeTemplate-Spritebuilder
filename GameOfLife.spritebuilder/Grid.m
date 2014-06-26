@@ -182,7 +182,8 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *currentCreature = _gridArray[i][j];
             
             // remember that every creature has a 'livingNeighbors' property that we created earlier
-            //currentCreature.livingNeighbors = 0;
+            //currentCreature.livingNeighbors = 0; we have to skip this in the update
+            //method because we are updating and not counting
             
             // now examine every cell around the current one
             
@@ -200,24 +201,21 @@ for (int i = 0; i < [_gridArray count]; i++)
                 if (!((x == i) && (y == j)) && isIndexValid)
                 {
                     
-                    
-                
                     // check if the Creature's livingNeighbors property is set to 3
                     if (currentCreature.livingNeighbors == 3) {
                         currentCreature.isAlive = TRUE;
                     } else {
                         if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
                             currentCreature.isAlive = FALSE;
+                            }
                         }
                     }
-    
-}
+                }
             }
         }
     }
-}
   
-        }
+}
 
 
 
