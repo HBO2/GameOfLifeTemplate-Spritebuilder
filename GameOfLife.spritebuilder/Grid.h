@@ -14,6 +14,13 @@
 @property (nonatomic, assign) int generation;
 
 
+-(void)evolveStep;
+-(void)countNeighbors;
+-(void)updateCreatures;
+//-(BOOL)isIndexValidForX:(int)x andY:(int)y;
+
+
+
 
 
 @end
