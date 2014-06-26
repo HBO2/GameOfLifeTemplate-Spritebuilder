@@ -182,7 +182,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *currentCreature = _gridArray[i][j];
             
             // remember that every creature has a 'livingNeighbors' property that we created earlier
-            currentCreature.livingNeighbors = 0;
+            //currentCreature.livingNeighbors = 0;
             
             // now examine every cell around the current one
             
@@ -200,7 +200,6 @@ for (int i = 0; i < [_gridArray count]; i++)
                 if (!((x == i) && (y == j)) && isIndexValid)
                 {
                     
-                   // Creature *neighbor = _gridArray[x][y];
                     
                 
                     // check if the Creature's livingNeighbors property is set to 3
