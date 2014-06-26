@@ -219,7 +219,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             }
         }
     }
-  _totalAlive = (numAlive / 3) -1;
+  _totalAlive = (numAlive / 3) - 1;
 }
 
 
