@@ -200,11 +200,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 if (!((x == i) && (y == j)) && isIndexValid)
                 {
                     
-                    Creature *neighbor = _gridArray[x][y];
-                    if (neighbor.isAlive)
-                    {
-                        currentCreature.livingNeighbors += 1;
-                    }
+                   // Creature *neighbor = _gridArray[x][y];
                     
                 
                     // check if the Creature's livingNeighbors property is set to 3
