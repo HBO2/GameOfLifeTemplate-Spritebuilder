@@ -182,7 +182,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             Creature *currentCreature = _gridArray[i][j];
             
             // remember that every creature has a 'livingNeighbors' property that we created earlier
-            //currentCreature.livingNeighbors = 0;
+            currentCreature.livingNeighbors = 0;
             
             // now examine every cell around the current one
             
@@ -192,6 +192,17 @@ for (int i = 0; i < [_gridArray count]; i++)
                 // go through the column to the left of the current cell, the column the cell is in, and the column to the right of the current cell
                 for (int y = (j-1); y <= (j+1); y++)
                 {
+                    // check that the cell we're checking isn't off the screen
+                    BOOL isIndexValid;
+                isIndexValid = [self isIndexValidForX:x andY:y];
+                
+                // skip over all cells that are off screen AND the cell that contains the creature we are currently updating
+                if (!((x == i) && (y == j)) && isIndexValid)
+                {
+                    Creature *neighbor = _gridArray[x][y];
+                {
+                    
+                    if (neighbor.isAlive){
                     // check if the Creature's livingNeighbors property is set to 3
                     if (currentCreature.livingNeighbors = 3) {
                         currentCreature.isAlive = TRUE;
@@ -203,6 +214,10 @@ for (int i = 0; i < [_gridArray count]; i++)
     
 }
             }
+        }
+    }
+}
+  
         }
     }
 }
