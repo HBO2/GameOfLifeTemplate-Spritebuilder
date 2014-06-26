@@ -199,10 +199,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 // skip over all cells that are off screen AND the cell that contains the creature we are currently updating
                 if (!((x == i) && (y == j)) && isIndexValid)
                 {
-                    Creature *neighbor = _gridArray[x][y];
-                {
-                    
-                    if (neighbor.isAlive){
+                
                     // check if the Creature's livingNeighbors property is set to 3
                     if (currentCreature.livingNeighbors = 3) {
                         currentCreature.isAlive = TRUE;
@@ -219,7 +216,7 @@ for (int i = 0; i < [_gridArray count]; i++)
 }
   
         }
-    }
-}
+
+
 
 @end
