@@ -172,14 +172,12 @@ for (int i = 0; i < [_gridArray count]; i++)
 
 
 -(void)updateCreatures{
-    
+    int numAlive = 0;
   
     // iterate through the rows
     // note that NSArray has a method 'count' that will return the number of elements in the array
     for (int i = 0; i < [_gridArray count]; i++)
     {
-        
-          int numAlive = 0;
         // iterate through all the columns for a given row
         for (int j = 0; j < [_gridArray[i] count]; j++)
         {
@@ -211,6 +209,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                     if (currentCreature.livingNeighbors == 3) {
                         currentCreature.isAlive = TRUE;
                          numAlive += 1;
+                        _totalAlive = numAlive;
                        
                     } else {
                         if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
@@ -222,7 +221,7 @@ for (int i = 0; i < [_gridArray count]; i++)
             }
         }
     }
-  _totalAlive = numAlive;
+  
 }
 
 
