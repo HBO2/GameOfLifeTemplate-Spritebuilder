@@ -193,7 +193,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 for (int y = (j-1); y <= (j+1); y++)
                 {
                     // check if the Creature's livingNeighbors property is set to 3
-                    if (currentCreature.livingNeighbors == 3) {
+                    if ((currentCreature.livingNeighbors = 3)) {
                         currentCreature.isAlive = TRUE;
                     } else {
                         if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
