@@ -111,6 +111,7 @@ static const int GRID_COLUMNS = 10;
     //update the generation so the label's text will display the correct generation
     _generation++;
     
+    
 }
 
 
@@ -206,14 +207,12 @@ for (int i = 0; i < [_gridArray count]; i++)
                     // check if the Creature's livingNeighbors property is set to 3
                     if (currentCreature.livingNeighbors == 3) {
                         currentCreature.isAlive = TRUE;
-                         numAlive = numAlive +1;
+                         numAlive++;
                        
                     } else {
                         if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
                             currentCreature.isAlive = FALSE;
                             }
-                       
-                      
                         }
                     }
                 }
