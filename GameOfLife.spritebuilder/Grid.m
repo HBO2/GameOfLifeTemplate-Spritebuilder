@@ -25,7 +25,6 @@ static const int GRID_COLUMNS = 10;
 
 
 
-
 - (void)onEnter
 {
     [super onEnter];
@@ -64,7 +63,7 @@ static const int GRID_COLUMNS = 10;
             _gridArray[i][j] = creature;
             
             // make creatures visible to test this method, remove this once we know we have filled the grid properly
-            creature.isAlive = YES;
+            //creature.isAlive = YES;
             
             x+=_cellWidth;
         }
