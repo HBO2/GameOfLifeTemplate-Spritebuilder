@@ -206,7 +206,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 {
                    
                     // check if the Creature's livingNeighbors property is set to 3
-                    if (currentCreature.livingNeighbors == 3) {
+                    if ((currentCreature.livingNeighbors = 3)) {
                         currentCreature.isAlive = TRUE;
                          numAlive += 1;
                        
