@@ -14,7 +14,8 @@
 // Please note: that the variables are declared before the @implementation!
 // And therfor available to all functions methods in this class file
 
-
+static const int GRID_ROWS = 8;
+static const int GRID_COLUMNS = 10;
 
 @implementation Grid {
     NSMutableArray *_gridArray;
@@ -22,8 +23,7 @@
     float _cellHeight;
 }
 
-static const int GRID_ROWS = 8;
-static const int GRID_COLUMNS = 10;
+
 
 
 - (void)onEnter
