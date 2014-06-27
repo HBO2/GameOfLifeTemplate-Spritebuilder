@@ -83,15 +83,17 @@ static const int GRID_COLUMNS = 10;
     //get the Creature at that location
     Creature *creature = [self creatureForTouchPosition:touchLocation];
     
-    //invert it's state - kill it if it's alive, bring it to life if it's dead.
-    creature.isAlive = !creature.isAlive;
-    
     _totalAlive = 0;
     if (creature.isAlive) {
         _totalAlive++;
     } else {
         _totalAlive--;
     }
+
+    
+    //invert it's state - kill it if it's alive, bring it to life if it's dead.
+    creature.isAlive = !creature.isAlive;
+    
     
 }
 
