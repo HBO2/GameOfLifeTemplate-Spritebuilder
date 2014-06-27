@@ -12,7 +12,7 @@
 
 // defining the Grid with the variables that cannot be changed
 // Please note: that the variables are declared before the @implementation!
-// And therfor available to all functions methods in this class file
+// And therfor available to all functions/methods in this class file
 
 static const int GRID_ROWS = 8;
 static const int GRID_COLUMNS = 10;
@@ -86,8 +86,12 @@ static const int GRID_COLUMNS = 10;
     //invert it's state - kill it if it's alive, bring it to life if it's dead.
     creature.isAlive = !creature.isAlive;
     
-  
-    
+    _totalAlive = 0;
+    if (creature.isAlive) {
+        _totalAlive++;
+    } else {
+        _totalAlive--;
+    }
     
 }
 
