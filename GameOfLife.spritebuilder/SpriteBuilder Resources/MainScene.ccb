@@ -372,7 +372,7 @@
 												<string>Text</string>
 												<key>value</key>
 												<array>
-													<string>population</string>
+													<string>Population</string>
 													<false/>
 												</array>
 											</dict>
@@ -524,7 +524,7 @@
 									</dict>
 									<dict>
 										<key>UUID</key>
-										<integer>13</integer>
+										<integer>15</integer>
 										<key>baseClass</key>
 										<string>CCLabelTTF</string>
 										<key>children</key>
@@ -534,7 +534,7 @@
 										<key>displayName</key>
 										<string>CCLabelTTF</string>
 										<key>memberVarAssignmentName</key>
-										<string>_generationLabel</string>
+										<string>_populationLabel</string>
 										<key>memberVarAssignmentType</key>
 										<integer>1</integer>
 										<key>properties</key>
@@ -554,8 +554,8 @@
 												<string>Position</string>
 												<key>value</key>
 												<array>
-													<real>45</real>
-													<real>20</real>
+													<real>46</real>
+													<real>68</real>
 													<integer>0</integer>
 													<integer>0</integer>
 													<integer>0</integer>
@@ -569,7 +569,7 @@
 												<key>value</key>
 												<array>
 													<real>0.5</real>
-													<real>0.5</real>
+													<real>1</real>
 												</array>
 											</dict>
 											<dict>
@@ -592,7 +592,8 @@
 												<string>Text</string>
 												<key>value</key>
 												<array>
-													<string>0</string>
+													<string>0
+</string>
 													<false/>
 												</array>
 											</dict>
@@ -741,6 +742,8 @@
 												</array>
 											</dict>
 										</array>
+										<key>selected</key>
+										<true/>
 									</dict>
 									<dict>
 										<key>UUID</key>
@@ -1040,7 +1043,7 @@
 									</dict>
 									<dict>
 										<key>UUID</key>
-										<integer>15</integer>
+										<integer>13</integer>
 										<key>baseClass</key>
 										<string>CCLabelTTF</string>
 										<key>children</key>
@@ -1050,7 +1053,7 @@
 										<key>displayName</key>
 										<string>CCLabelTTF</string>
 										<key>memberVarAssignmentName</key>
-										<string>_populationLabel</string>
+										<string>_generationLabel</string>
 										<key>memberVarAssignmentType</key>
 										<integer>1</integer>
 										<key>properties</key>
@@ -1070,8 +1073,8 @@
 												<string>Position</string>
 												<key>value</key>
 												<array>
-													<real>47</real>
-													<real>62</real>
+													<real>45</real>
+													<real>20</real>
 													<integer>0</integer>
 													<integer>0</integer>
 													<integer>0</integer>
@@ -1084,8 +1087,8 @@
 												<string>Point</string>
 												<key>value</key>
 												<array>
-													<real>0.72265625</real>
-													<real>0.90247398614883423</real>
+													<real>0.5</real>
+													<real>0.5</real>
 												</array>
 											</dict>
 											<dict>
@@ -1108,8 +1111,7 @@
 												<string>Text</string>
 												<key>value</key>
 												<array>
-													<string>0
-</string>
+													<string>0</string>
 													<false/>
 												</array>
 											</dict>
@@ -1180,7 +1182,7 @@
 												<key>type</key>
 												<string>IntegerLabeled</string>
 												<key>value</key>
-												<integer>0</integer>
+												<integer>1</integer>
 											</dict>
 											<dict>
 												<key>name</key>
@@ -1667,8 +1669,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 							<dict>
 								<key>UUID</key>

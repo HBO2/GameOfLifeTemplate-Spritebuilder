@@ -154,11 +154,8 @@ for (int i = 0; i < [_gridArray count]; i++)
         }
     }
 }
-    
-  
-    
-
 }
+
 
 - (BOOL)isIndexValidForX:(int)x andY:(int)y
 {
@@ -183,41 +180,20 @@ for (int i = 0; i < [_gridArray count]; i++)
         {
             // access the creature in the cell that corresponds to the current row/column
             Creature *currentCreature = _gridArray[i][j];
-            
-            // remember that every creature has a 'livingNeighbors' property that we created earlier
-            //currentCreature.livingNeighbors = 0;
-            //we have to skip this in the update
-            //method because we are updating and not counting
-            
-            // now examine every cell around the current one
-            
-            // go through the row on top of the current cell, the row the cell is in, and the row past the current cell
-            for (int x = (i-1); x <= (i+1); x++)
-            {
-                // go through the column to the left of the current cell, the column the cell is in, and the column to the right of the current cell
-                for (int y = (j-1); y <= (j+1); y++)
-                {
-                    // check that the cell we're checking isn't off the screen
-                    BOOL isIndexValid;
-                isIndexValid = [self isIndexValidForX:x andY:y];
-                
-                // skip over all cells that are off screen AND the cell that contains the creature we are currently updating
-                if (!((x == i) && (y == j)) && isIndexValid)
-                {
-                   
+        
                     // check if the Creature's livingNeighbors property is set to 3
                     if (currentCreature.livingNeighbors == 3) {
                         currentCreature.isAlive = TRUE;
-                         numAlive += 1;
                       
                     } else {
                         if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4) {
                             currentCreature.isAlive = FALSE;
-                            
                             }
-                        }
-                    }
-                }
+                        if (currentCreature.isAlive) {
+                            numAlive++;
+                            }
+                        
+                        
             }
         }
     }
