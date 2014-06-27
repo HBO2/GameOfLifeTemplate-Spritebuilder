@@ -177,7 +177,7 @@ for (int i = 0; i < [_gridArray count]; i++)
 
 
 -(void)updateCreatures{
-    _totalAlive = 0;
+    int numAlive = 0;
   
     // iterate through the rows
     // note that NSArray has a method 'count' that will return the number of elements in the array
@@ -198,14 +198,14 @@ for (int i = 0; i < [_gridArray count]; i++)
                             currentCreature.isAlive = FALSE;
                             }
                         if (currentCreature.isAlive) {
-                             _totalAlive++;
+                             numAlive++;
                             }
                         
                         
             }
         }
     }
-   
+    _totalAlive = numAlive;
 }
 
 
